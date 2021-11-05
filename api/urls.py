@@ -17,4 +17,5 @@ from django.urls import path, include
 from .views import *
 urlpatterns = [
     path('', coin_list, name='coin_list'),
+    path('tabla', tabla, name='tabla'),
 ]

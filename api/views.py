@@ -2,6 +2,10 @@ from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 
 
+def tabla(request):
+    return render(request, 'index.html', {})
+
+
 def coin_list(request):
     from requests import Session
     import json
@@ -23,4 +27,3 @@ def coin_list(request):
     response = session.get(url, params=parameters)
     data = json.loads(response.text)
     return JsonResponse(data['data'], safe=False)
-
