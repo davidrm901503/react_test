@@ -132,7 +132,6 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 django_heroku.settings(locals())
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles/")
-SECURE_SSL_REDIRECT = os.environ['SSL_REDIRECT'] == 'TRUE'
 STATICFILES_DIRS = [
     os.path.join(PROJECT_ROOT, 'static'),
 ]
